@@ -1,0 +1,1 @@
+require("plugins/rose-pine")
