@@ -1,0 +1,27 @@
+[submodule "pack/vendor/start/blink.cmp"]
+	path = pack/vendor/start/blink.cmp
+	url = https://github.com/Saghen/blink.cmp.git
+[submodule "pack/vendor/start/conform.nvim"]
+	path = pack/vendor/start/conform.nvim
+	url = https://github.com/stevearc/conform.nvim.git
+[submodule "pack/vendor/start/mason-lspconfig.nvim"]
+	path = pack/vendor/start/mason-lspconfig.nvim
+	url = https://github.com/mason-org/mason-lspconfig.nvim.git
+[submodule "pack/vendor/start/mason.nvim"]
+	path = pack/vendor/start/mason.nvim
+	url = https://github.com/mason-org/mason.nvim.git
+[submodule "pack/vendor/start/nvim-lspconfig"]
+	path = pack/vendor/start/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule "pack/vendor/start/nvim-treesitter"]
+	path = pack/vendor/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule "pack/vendor/start/plenary.nvim"]
+	path = pack/vendor/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "pack/vendor/start/rose-pine"]
+	path = pack/vendor/start/rose-pine
+	url = https://github.com/rose-pine/neovim.git
+[submodule "pack/vendor/start/telescope.nvim"]
+	path = pack/vendor/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
