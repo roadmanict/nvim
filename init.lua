@@ -19,10 +19,42 @@ vim.keymap.set("n", "<leader>ps", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
+require("blink.cmp").setup()
+
+local mason_lsps = {
+	"lua_ls",
+	"ts_ls",
+	"angularls",
+	"ansiblels",
+	"eslint",
+	"jdtls",
+}
+
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = mason_lsps,
+	automatic_enable = false,
+})
+local mason_tools_ensure_installed = {
+	-- linters
+	-- formatters
+	"prettierd",
+	"stylua",
+}
+vim.api.nvim_create_user_command("MasonInstallAll", function()
+	local packages = table.concat(mason_tools_ensure_installed, " ")
+	vim.cmd("MasonInstall " .. packages)
+end, {})
+
+vim.lsp.enable(mason_lsps)
+
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
+		javascript = { "prettierd" },
 		typescript = { "prettierd" },
+		yaml = { "prettierd" },
+		xml = { "prettierd" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
@@ -33,12 +65,3 @@ require("conform").setup({
 vim.keymap.set("n", "<leader>f", function()
 	require("conform").format({ async = true, lsp_fallback = true })
 end, { desc = "Conform format file" })
-
-require("blink.cmp").setup()
-
-require("mason").setup()
-require("mason-lspconfig").setup({
-	automatic_enable = false,
-})
-
-vim.lsp.enable({ "lua_ls", "ts_ls", "angularls" })
