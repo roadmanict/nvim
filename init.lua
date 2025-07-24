@@ -40,6 +40,7 @@ local mason_tools_ensure_installed = {
 	-- formatters
 	"prettierd",
 	"stylua",
+	"xmlformatter",
 }
 vim.api.nvim_create_user_command("MasonInstallAll", function()
 	local packages = table.concat(mason_tools_ensure_installed, " ")
@@ -55,7 +56,7 @@ require("conform").setup({
 		json = { "prettierd" },
 		typescript = { "prettierd" },
 		yaml = { "prettierd" },
-		xml = { "prettierd" },
+		xml = { "xmlformatter" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
