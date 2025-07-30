@@ -1,7 +1,6 @@
 [submodule "pack/vendor/start/blink.cmp"]
 	path = pack/vendor/start/blink.cmp
 	url = https://github.com/Saghen/blink.cmp.git
-	branch = 1.5.0
 [submodule "pack/vendor/start/conform.nvim"]
 	path = pack/vendor/start/conform.nvim
 	url = https://github.com/stevearc/conform.nvim.git
