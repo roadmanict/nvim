@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 require("roadmanict")
 require("plugins")
 
-require("nvim-treesitter").setup({
+require("nvim-treesitter.configs").setup({
 	ensure_installed = { "typescript", "javascript", "rust", "java", "html" },
 	auto_install = false,
 	highlight = {
