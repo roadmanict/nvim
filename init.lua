@@ -25,7 +25,7 @@ local mason_lsps = {
 	"angularls",
 	"ansiblels",
 	"eslint",
-	"html-lsp",
+	"html",
 	"jdtls",
 	"lua_ls",
 	"ts_ls",
