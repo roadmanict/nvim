@@ -22,12 +22,13 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 require("blink.cmp").setup()
 
 local mason_lsps = {
-	"lua_ls",
-	"ts_ls",
 	"angularls",
 	"ansiblels",
 	"eslint",
+	"html-lsp",
 	"jdtls",
+	"lua_ls",
+	"ts_ls",
 }
 
 require("mason").setup()
